@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BJS Teknik AC - Profesional dan Bergaransi </title>
+    <title>iMersFireship - Digital Product Platform</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     
@@ -32,7 +32,7 @@
             --brand-color: #4f46e5;
             --brand-hover: #4338ca;
             --secondary-color: #ec4899;
-            --app-name: "BJS Teknik AC";
+            --app-name: "iMersFireship";
         }
         
         body { 
@@ -1701,7 +1701,7 @@ window.showToast = (m, t = 'success') => {
 
 async function apiCall(action, payload = null) {
     // 🔒 GATES FIXED: Hanya memblokir jika string murni mengandung teks instruksi bawaan template!
-    if (!SCRIPT_URL || SCRIPT_URL.includes("https://script.google.com/macros/s/AKfycby-q1oBRy0-mQzrRG0n-DnaAVWhlrojM_WkKyGZ4NSoedf4yBQGhh6wDkJ2moKX1KDU/exec") || SCRIPT_URL.trim() === "") {
+    if (!SCRIPT_URL || SCRIPT_URL.includes("URL_WEB_APP_APPS_SCRIPT_LO_DISINI") || SCRIPT_URL.trim() === "") {
         window.showToast("Script URL belum diganti di baris konfigurasi atas ya bro!", "error");
         throw new Error("URL Belum disetting");
     }
