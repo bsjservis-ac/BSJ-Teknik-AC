@@ -676,6 +676,7 @@
                             <div>
                                 <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Password Saat Ini</label>
                                 <input type="password" id="cpOldPass" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-brand outline-none transition-all dark:text-white font-medium" required>
+                                <p class="text-[10px] text-slate-500 mt-1 italic">*Jika baru mereset akun, masukkan kode OTP dari WA/Email di sini.</p>
                             </div>
                             <div>
                                 <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Password Baru</label>
@@ -1071,6 +1072,7 @@
                                             <option value="fonnte">Fonnte</option>
                                             <option value="starsender">StarSender</option>
                                             <option value="xsender">Xsender</option>
+                                            <option value="waplus">WaPlus API</option>
                                             <option value="custom">Custom API</option>
                                         </select>
                                     </div>
@@ -1606,7 +1608,7 @@ window.startOTPProcess = async (wa, email, actionType) => {
 
 window.executeFinalAction = () => {
     if (otpActionTarget === 'checkout') window.submitCheckout();
-    else if (otpActionTarget === 'register') window.saveUser();
+    else if (otpActionTarget === 'register') window.handleRegisterAction();
 };
 
 window.runOTPTimer = () => {
@@ -1668,14 +1670,15 @@ window.prepareCheckout = () => {
 };
 
 window.prepareRegister = () => {
+    const name = document.getElementById('regName')?.value.trim(); 
     const email = document.getElementById('regEmail')?.value.trim(); 
     const wa = document.getElementById('regWa')?.value.trim();
-    if(!wa || !email) return window.showToast("Lengkapi data pendaftaran!", "error");
+    if(!name || !wa || !email) return window.showToast("Lengkapi semua data pendaftaran!", "error");
     window.startOTPProcess(wa, email, 'register');
 };
     
     
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby-q1oBRy0-mQzrRG0n-DnaAVWhlrojM_WkKyGZ4NSoedf4yBQGhh6wDkJ2moKX1KDU/exec"; // GANTI DENGAN URL WEB APP LO
+const SCRIPT_URL = "URL_WEB_APP_APPS_SCRIPT_LO_DISINI"; // GANTI DENGAN URL WEB APP LO
 
 window.showToast = (m, t = 'success') => {
     const el = document.getElementById('toast');
@@ -3071,7 +3074,9 @@ window.saveUser = async () => {
             });
             const licenseData = selectedProducts.join(', ');
             
-            let payload = { id, name, email, wa, role, license: licenseData };
+            // --- SUNTIKAN ANTI-HACK (Ngelaporin Eksekutor ke Backend) ---
+            const executorEmail = window.appState.user ? window.appState.user.email : '';
+            let payload = { id, name, email, wa, role, license: licenseData, executorEmail: executorEmail };
             // ---------------------------------------------------
            
             if (id) { 
@@ -3094,7 +3099,6 @@ window.saveUser = async () => {
             window.showToast(e.message, "error");
         }
     };
-
     window.editUser = (id) => {
     try {
         const u = window.appState.usersData.find(x => String(x.id) === String(id));
