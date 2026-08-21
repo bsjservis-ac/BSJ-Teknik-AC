@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BSJ Teknik AC - Profesional & Bergaransi </title>
+    <title>BSJ Teknik AC - Profesional & Bergaransi</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     
@@ -32,7 +32,7 @@
             --brand-color: #4f46e5;
             --brand-hover: #4338ca;
             --secondary-color: #ec4899;
-            --app-name: "iMersFireship";
+            --app-name: "BSJ Teknik AC";
         }
         
         body { 
@@ -241,7 +241,7 @@
                         <i class="ph ph-rocket-launch text-4xl"></i>
                     </div>
                 </div>
-                <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand to-purple-500 app-name-display">iMersFireship</h1>
+                <h1 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-brand to-purple-500 app-name-display">BSJ Teknik AC</h1>
                 <p id="authSubtitle" class="text-slate-500 dark:text-slate-400 text-sm mt-2 font-medium">Admin & User Login</p>
             </div>
 
@@ -286,7 +286,7 @@
                     <input type="password" id="regPassword" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-brand outline-none transition-all dark:text-white font-medium" required>
                 </div>
                 <div class="pt-2">
-                    <button type="button" onclick="window.prepareRegister()" id="regBtn" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-green-500/30 transition-all flex justify-center items-center gap-2 text-lg">
+                    <button type="submit" id="regBtn" class="w-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-green-500/30 transition-all flex justify-center items-center gap-2 text-lg">
     <span>Daftar Sekarang</span>
     <i class="ph ph-user-plus"></i>
 </button>
@@ -335,7 +335,7 @@
                 <i id="appIconSidebar" class="ph ph-rocket-launch text-xl"></i>
             </div>
         </div>
-        <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-brand to-purple-600 dark:from-indigo-400 dark:to-purple-400 tracking-wide app-name-display truncate">iMersFireship</span>
+        <span class="text-lg font-black text-transparent bg-clip-text bg-gradient-to-r from-brand to-purple-600 dark:from-indigo-400 dark:to-purple-400 tracking-wide app-name-display truncate">BSJ Teknik AC</span>
     </div>
 
     <div class="flex-1 overflow-y-auto py-6 px-4 space-y-1">
@@ -1041,7 +1041,7 @@
                                     <div class="space-y-4">
                                         <div>
                                             <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Platform Name</label>
-                                            <input type="text" id="settingAppName" value="iMersFireship" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-brand outline-none transition-all dark:text-white font-medium">
+                                            <input type="text" id="settingAppName" value="BSJ Teknik AC" class="w-full px-4 py-3 bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-brand outline-none transition-all dark:text-white font-medium">
                                         </div>
                                         <div>
                                             <label class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Primary Color (Hex)</label>
@@ -1492,12 +1492,12 @@
         <span id="toastMsg" class="text-sm font-bold">Notification message</span>
     </div>
 
-    <div id="Modal" class="fixed inset-0 z-[9999] hidden flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 font-['Montserrat']">
-    <div id="Container" class="glass w-full max-w-md rounded-[2.5rem] overflow-hidden p-10 text-center relative">
+    <div id="otpModal" class="fixed inset-0 z-[9999] hidden flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 font-['Montserrat']">
+    <div id="otpContainer" class="glass w-full max-w-md rounded-[2.5rem] overflow-hidden p-10 text-center relative">
         
         <div class="flex justify-center mb-6">
     <div class="p-3 rounded-2xl bg-white/50 dark:bg-slate-800/50 border border-white/20 shadow-sm">
-        <img id="Logo" src="" alt="Logo" class="h-10 w-auto">
+        <img id="otpLogo" src="" alt="Logo" class="h-10 w-auto">
     </div>
 </div>
 
@@ -1511,15 +1511,15 @@
         </div>
 
         <div class="flex justify-center gap-2 mb-10" id="Inputs">
-            <input type="number" maxlength="1" class="-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
-            <input type="number" maxlength="1" class="-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
-            <input type="number" maxlength="1" class="-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
-            <input type="number" maxlength="1" class="-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
-            <input type="number" maxlength="1" class="-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
-            <input type="number" maxlength="1" class="-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="-field otp-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="-field otp-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="-field otp-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="-field otp-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="-field otp-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
+            <input type="text" inputmode="numeric" pattern="[0-9]*" maxlength="1" class="-field otp-field w-11 h-14 text-center text-2xl font-black rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white/40 dark:bg-slate-800/40 text-slate-800 dark:text-white outline-none transition-all">
         </div>
 
-        <button onclick="window.confirm()" id="btnVerify" class="w-full bg-brand hover:bg-brandHover text-white font-black py-4 rounded-[1.5rem] shadow-[0_10px_25px_rgba(79,70,229,0.3)] transition-all mb-8 uppercase tracking-widest text-sm active:scale-95">
+        <button onclick="window.confirmOTP()" id="btnVerifyOTP" class="w-full bg-brand hover:bg-brandHover text-white font-black py-4 rounded-[1.5rem] shadow-[0_10px_25px_rgba(79,70,229,0.3)] transition-all mb-8 uppercase tracking-widest text-sm active:scale-95">
             Verifikasi Sekarang
         </button>
 
@@ -1529,7 +1529,7 @@
             </p>
         </div>
         
-        <button onclick="window.closeModal()" class="mt-8 text-[10px] font-black text-slate-400 hover:text-red-500 uppercase tracking-[0.3em] transition-colors italic border-t border-white/5 pt-4 block w-full">
+        <button onclick="window.closeOTPModal()" class="mt-8 text-[10px] font-black text-slate-400 hover:text-red-500 uppercase tracking-[0.3em] transition-colors italic border-t border-white/5 pt-4 block w-full">
             [ Batal & Kembali ]
         </button>
     </div>
@@ -1547,7 +1547,7 @@ let otpActionTarget = '';
 window.maskInfo = (str, type) => {
     if (!str) return "...";
     if (type === 'email') {
-        const [u, d] = str.split("@");
+        const [u = '', d = ''] = String(str).split("@");
         return u.substring(0, 2) + "***@" + d;
     }
     const s = String(str);
@@ -1560,8 +1560,8 @@ window.startOTPProcess = async (wa, email, actionType) => {
     // ============================================================
     // 🔒 GATES: LOGIC SAKLAR GLOBAL OTP ON/OFF (ANTI-CRASH)
     // ============================================================
-    const statusOtpSistem = window.appState && window.appState.config && window.appState.config.STATUS_OTP 
-                            ? String(window.appState.config.STATUS_OTP).toUpperCase().trim() 
+    const statusOtpSistem = window.appState && window.appState.systemSettings && window.appState.systemSettings.STATUS_OTP
+                            ? String(window.appState.systemSettings.STATUS_OTP).toUpperCase().trim()
                             : "OFF"; 
 
     console.log("🛡️ [iMers Engine] Status Proteksi OTP Global:", statusOtpSistem);
@@ -1574,7 +1574,7 @@ window.startOTPProcess = async (wa, email, actionType) => {
     // --- LOGIC LOGO DINAMIS iMersFireship ---
     const logoEl = document.getElementById('otpLogo');
     if (logoEl) {
-        const configLogo = window.appState.config?.logoUrl || window.appState.settings?.logoUrl;
+        const configLogo = window.appState.settings?.logoUrl;
         logoEl.src = configLogo || 'https://alldigital.web.id/imersfireship/logo.png';
     }
 
@@ -1589,7 +1589,7 @@ window.startOTPProcess = async (wa, email, actionType) => {
     window.showToast("Mengirim kode OTP...", "info");
 
     try {
-        const res = await apiCall('requestOTP', { wa, email });
+        const res = await apiCall('requestOTP', { wa, email, purpose: actionType });
         if (res.success) {
             document.getElementById('otpModal').classList.remove('hidden');
             document.getElementById('maskedTarget').innerText = `${window.maskInfo(wa, 'wa')} & ${window.maskInfo(email, 'email')}`;
@@ -1602,13 +1602,17 @@ window.startOTPProcess = async (wa, email, actionType) => {
             window.showToast(res.error || "Gagal kirim OTP", "error");
         }
     } catch (err) {
-        window.showToast("Sistem OTP Sibuk, coba lagi nanti", "error");
+        window.showToast(err.message || "Sistem OTP sibuk, coba lagi nanti", "error");
     }
 };
 
 window.executeFinalAction = () => {
-    if (otpActionTarget === 'checkout') window.submitCheckout();
-    else if (otpActionTarget === 'register') window.handleRegisterAction();
+    if (otpActionTarget === 'checkout' && typeof window.submitCheckout === 'function') {
+        return window.submitCheckout();
+    }
+    if (otpActionTarget === 'register' && typeof window.handleRegisterAction === 'function') {
+        return window.handleRegisterAction();
+    }
 };
 
 window.runOTPTimer = () => {
@@ -1640,11 +1644,11 @@ window.confirmOTP = async () => {
             window.closeOTPModal();
             window.executeFinalAction(); 
         } else {
-            document.getElementById('otpContainer').classList.add('shake-it');
-            setTimeout(() => document.getElementById('otpContainer').classList.remove('shake-it'), 500);
+            document.getElementById('otpContainer')?.classList.add('shake-it');
+            setTimeout(() => document.getElementById('otpContainer')?.classList.remove('shake-it'), 500);
             window.showToast(res.error || "Kode Salah", "error");
             inputs.forEach(i => i.value = '');
-            inputs[0].focus();
+            if (inputs[0]) inputs[0].focus();
         }
     } catch (err) {
         if(btn) { btn.disabled = false; btn.innerText = "Verifikasi Sekarang"; }
@@ -1658,7 +1662,7 @@ document.querySelectorAll('.otp-field').forEach((input, i, all) => {
 });
 
 window.closeOTPModal = () => {
-    document.getElementById('otpModal').classList.add('hidden');
+    document.getElementById('otpModal')?.classList.add('hidden');
     clearInterval(otpTimer);
 };
 
@@ -1670,11 +1674,9 @@ window.prepareCheckout = () => {
 };
 
 window.prepareRegister = () => {
-    const name = document.getElementById('regName')?.value.trim(); 
-    const email = document.getElementById('regEmail')?.value.trim(); 
-    const wa = document.getElementById('regWa')?.value.trim();
-    if(!name || !wa || !email) return window.showToast("Lengkapi semua data pendaftaran!", "error");
-    window.startOTPProcess(wa, email, 'register');
+    const form = document.getElementById('registerForm');
+    if (form && !form.reportValidity()) return;
+    return window.handleRegisterAction();
 };
     
     
@@ -1784,6 +1786,7 @@ async function apiCall(action, payload = null) {
             banks: [],
             notifications: { waProvider: 'fonnte', waToken: '', adminWa: '', emailProvider: 'google', emailToken: '', telegramToken: '', telegramChatId: '' }
         },
+        systemSettings: {},
         currentCheckoutProduct: null, currentCheckoutUniqueCode: 0, currentCheckoutCoupon: null
     };
 
@@ -1962,12 +1965,20 @@ async function apiCall(action, payload = null) {
                 window.initChart();
             } else {
                 try {
-                    const setRes = await apiCall('getSettings');
-                    if(setRes && setRes.data) {
+                    const [setRes, sysRes] = await Promise.all([
+                        apiCall('getSettings'),
+                        apiCall('getSystemSettings')
+                    ]);
+                    if (setRes && setRes.data) {
                         window.appState.settings = setRes.data;
                         window.applySettingsUI();
                     }
-                } catch(e){}
+                    if (sysRes && sysRes.data) {
+                        window.appState.systemSettings = sysRes.data;
+                    }
+                } catch(e) {
+                    console.warn("Gagal memuat setting publik:", e);
+                }
             }
         }
     };
@@ -2173,7 +2184,7 @@ async function apiCall(action, payload = null) {
         }
         // ============================================================
         
-        if (document.getElementById('settingAppName')) document.getElementById('settingAppName').value = set.appName || 'iMersFireship';
+        if (document.getElementById('settingAppName')) document.getElementById('settingAppName').value = set.appName || 'BSJ Teknik AC';
         if (document.getElementById('settingColor')) document.getElementById('settingColor').value = set.primaryColor || '#4f46e5';
         if (document.getElementById('settingColorText')) document.getElementById('settingColorText').value = set.primaryColor || '#4f46e5';
         if (document.getElementById('settingLogoUrl')) document.getElementById('settingLogoUrl').value = set.logoUrl || '';
@@ -2270,31 +2281,55 @@ async function apiCall(action, payload = null) {
         }
     };
 
-    window.handleRegister = async (e) => {
-        e.preventDefault();
-        const btn = document.getElementById('regBtn');
-        const name = document.getElementById('regName').value;
-        const email = document.getElementById('regEmail').value;
-        const rawWa = document.getElementById('regWa').value;
-        const wa = window.formatPhoneNumber(rawWa);
-        const rawPass = document.getElementById('regPassword').value;
+    window.handleRegisterAction = async () => {
+        const form = document.getElementById('registerForm');
+        if (form && !form.reportValidity()) return;
 
-        btn.innerHTML = '<i class="ph ph-spinner animate-spin"></i> Memproses...';
-        
+        const btn = document.getElementById('regBtn');
+        const name = document.getElementById('regName')?.value.trim() || '';
+        const email = document.getElementById('regEmail')?.value.trim().toLowerCase() || '';
+        const rawWa = document.getElementById('regWa')?.value.trim() || '';
+        const wa = window.formatPhoneNumber(rawWa);
+        const rawPass = document.getElementById('regPassword')?.value || '';
+
+        if (!name || !email || !wa || !rawPass) {
+            return window.showToast("Lengkapi semua data pendaftaran!", "error");
+        }
+
+        if (btn) {
+            btn.disabled = true;
+            btn.innerHTML = '<i class="ph ph-spinner animate-spin"></i> Memproses...';
+        }
+
         try {
             const hashedPass = await window.hashPassword(rawPass);
-            const payload = { name, email, wa, password: hashedPass, role: 'user', license: 'USER-BASIC-'+Math.floor(Math.random()*999) };
-            
+            const payload = {
+                name,
+                email,
+                wa,
+                password: hashedPass,
+                role: 'user',
+                license: 'USER-BASIC-' + Math.floor(Math.random() * 999)
+            };
+
             await apiCall('register', payload);
-            
+
             window.showToast("Registrasi berhasil! Silakan Login.");
-            document.getElementById('registerForm').reset();
+            if (form) form.reset();
             window.switchAuthView('login');
         } catch(err) {
-            window.showToast("Error: " + err.message, "error");
+            window.showToast("Error: " + (err.message || "Registrasi gagal"), "error");
         } finally {
-            btn.innerHTML = '<span>Daftar Sekarang</span> <i class="ph ph-user-plus"></i>';
+            if (btn) {
+                btn.disabled = false;
+                btn.innerHTML = '<span>Daftar Sekarang</span> <i class="ph ph-user-plus"></i>';
+            }
         }
+    };
+
+    window.handleRegister = async (e) => {
+        if (e && typeof e.preventDefault === 'function') e.preventDefault();
+        return window.handleRegisterAction();
     };
 
     window.handleForgot = async (e) => {
